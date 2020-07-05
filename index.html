@@ -50,22 +50,17 @@
 <h2 id="-limpiar">🧼 Limpiar nuestros datos</h2>
       La información sobre nuestros tweets viene en un archivo de JavaScript, pero fácilmente podemos convertirlos en JSON para después leerlos usando Pandas con el siguiente código:
       
-      <div class="highlight highlight-source-python"><pre><span class="pl-k">for</span> <span class="pl-s1">c</span> <span class="pl-c1">in</span> <span class="pl-v">Counter</span>(<span class="pl-s1">text_tere_clean</span>).<span class="pl-en">most_common</span>():
-    <span class="pl-k">if</span> <span class="pl-en">list</span>(<span class="pl-s1">pp</span>.<span class="pl-en">tag</span>(<span class="pl-s1">c</span>[<span class="pl-c1">0</span>])[<span class="pl-c1">0</span>])<span class="pl-c1">==</span>[<span class="pl-s">'GivenName'</span>] <span class="pl-c1">and</span> <span class="pl-c1">not</span> <span class="pl-s1">d</span>.<span class="pl-en">check</span>(<span class="pl-s1">c</span>[<span class="pl-c1">0</span>]) <span class="pl-c1">and</span> <span class="pl-en">len</span>(<span class="pl-en">set</span>(<span class="pl-s1">c</span>[<span class="pl-c1">0</span>])) <span class="pl-c1">!=</span> <span class="pl-c1">2</span>:
-        <span class="pl-k">if</span> <span class="pl-c1">not</span> <span class="pl-s1">d2</span>.<span class="pl-en">check</span>(<span class="pl-s1">c</span>[<span class="pl-c1">0</span>]):
-            <span class="pl-en">print</span>(<span class="pl-s1">c</span>)
-            
-<span class="pl-k">for</span> <span class="pl-s1">c</span> <span class="pl-c1">in</span> <span class="pl-v">Counter</span>(<span class="pl-s1">text_vivi_clean</span>).<span class="pl-en">most_common</span>():
-    <span class="pl-k">if</span> <span class="pl-en">list</span>(<span class="pl-s1">pp</span>.<span class="pl-en">tag</span>(<span class="pl-s1">c</span>[<span class="pl-c1">0</span>])[<span class="pl-c1">0</span>])<span class="pl-c1">==</span>[<span class="pl-s">'GivenName'</span>] <span class="pl-c1">and</span> <span class="pl-c1">not</span> <span class="pl-s1">d</span>.<span class="pl-en">check</span>(<span class="pl-s1">c</span>[<span class="pl-c1">0</span>]) <span class="pl-c1">and</span> <span class="pl-en">len</span>(<span class="pl-en">set</span>(<span class="pl-s1">c</span>[<span class="pl-c1">0</span>])) <span class="pl-c1">!=</span> <span class="pl-c1">2</span>:
-        <span class="pl-k">if</span> <span class="pl-c1">not</span> <span class="pl-s1">d2</span>.<span class="pl-en">check</span>(<span class="pl-s1">c</span>[<span class="pl-c1">0</span>]):
-            <span class="pl-en">print</span>(<span class="pl-s1">c</span>)</pre></div>
-      
-      <div class="highlight highlight-source-python"><pre><span class="pl-k">with</span> <span class="pl-en">open</span>(<span class="pl-s">'../data/tweet.js'</span>) <span class="pl-k">as</span> <span class="pl-s1">f</span>:
-    <span class="pl-s1">file</span> <span class="pl-c1">=</span> <span class="pl-s1">f</span>.<span class="pl-en">read</span>()
-    <span class="pl-s1">file</span> <span class="pl-c1">=</span> <span class="pl-s1">file</span>[<span class="pl-s1">file</span>.<span class="pl-en">find</span>(<span class="pl-s">"["</span>):]
+      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">pandas.io.json</span> <span class="kn">import</span> <span class="n">json_normalize</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'../data/tweet.js'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="nb">file</span> <span class="o">=</span> <span class="n">f</span><span class="p">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="nb">file</span> <span class="o">=</span> <span class="nb">file</span><span class="p">[</span><span class="nb">file</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">"["</span><span class="p">):]</span>
     
-<span class="pl-s1">data</span> <span class="pl-c1">=</span> <span class="pl-s1">json</span>.<span class="pl-en">loads</span>(<span class="pl-s1">file</span>)
-<span class="pl-s1">df</span> <span class="pl-c1">=</span> <span class="pl-en">json_normalize</span>(<span class="pl-s1">data</span>)</pre></div>
+<span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="n">loads</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">json_normalize</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</code></pre></div></div>
+      
       
 
 <hr />

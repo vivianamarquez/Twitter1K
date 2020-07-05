@@ -50,6 +50,16 @@
 <h2 id="-limpiar">🧼 Limpiar nuestros datos</h2>
       La información sobre nuestros tweets viene en un archivo de JavaScript, pero fácilmente podemos convertirlos en JSON para después leerlos usando Pandas con el siguiente código:
       
+      <div class="highlight highlight-source-python"><pre><span class="pl-k">for</span> <span class="pl-s1">c</span> <span class="pl-c1">in</span> <span class="pl-v">Counter</span>(<span class="pl-s1">text_tere_clean</span>).<span class="pl-en">most_common</span>():
+    <span class="pl-k">if</span> <span class="pl-en">list</span>(<span class="pl-s1">pp</span>.<span class="pl-en">tag</span>(<span class="pl-s1">c</span>[<span class="pl-c1">0</span>])[<span class="pl-c1">0</span>])<span class="pl-c1">==</span>[<span class="pl-s">'GivenName'</span>] <span class="pl-c1">and</span> <span class="pl-c1">not</span> <span class="pl-s1">d</span>.<span class="pl-en">check</span>(<span class="pl-s1">c</span>[<span class="pl-c1">0</span>]) <span class="pl-c1">and</span> <span class="pl-en">len</span>(<span class="pl-en">set</span>(<span class="pl-s1">c</span>[<span class="pl-c1">0</span>])) <span class="pl-c1">!=</span> <span class="pl-c1">2</span>:
+        <span class="pl-k">if</span> <span class="pl-c1">not</span> <span class="pl-s1">d2</span>.<span class="pl-en">check</span>(<span class="pl-s1">c</span>[<span class="pl-c1">0</span>]):
+            <span class="pl-en">print</span>(<span class="pl-s1">c</span>)
+            
+<span class="pl-k">for</span> <span class="pl-s1">c</span> <span class="pl-c1">in</span> <span class="pl-v">Counter</span>(<span class="pl-s1">text_vivi_clean</span>).<span class="pl-en">most_common</span>():
+    <span class="pl-k">if</span> <span class="pl-en">list</span>(<span class="pl-s1">pp</span>.<span class="pl-en">tag</span>(<span class="pl-s1">c</span>[<span class="pl-c1">0</span>])[<span class="pl-c1">0</span>])<span class="pl-c1">==</span>[<span class="pl-s">'GivenName'</span>] <span class="pl-c1">and</span> <span class="pl-c1">not</span> <span class="pl-s1">d</span>.<span class="pl-en">check</span>(<span class="pl-s1">c</span>[<span class="pl-c1">0</span>]) <span class="pl-c1">and</span> <span class="pl-en">len</span>(<span class="pl-en">set</span>(<span class="pl-s1">c</span>[<span class="pl-c1">0</span>])) <span class="pl-c1">!=</span> <span class="pl-c1">2</span>:
+        <span class="pl-k">if</span> <span class="pl-c1">not</span> <span class="pl-s1">d2</span>.<span class="pl-en">check</span>(<span class="pl-s1">c</span>[<span class="pl-c1">0</span>]):
+            <span class="pl-en">print</span>(<span class="pl-s1">c</span>)</pre></div>
+      
       <div class="highlight highlight-source-python"><pre><span class="pl-k">with</span> <span class="pl-en">open</span>(<span class="pl-s">'../data/tweet.js'</span>) <span class="pl-k">as</span> <span class="pl-s1">f</span>:
     <span class="pl-s1">file</span> <span class="pl-c1">=</span> <span class="pl-s1">f</span>.<span class="pl-en">read</span>()
     <span class="pl-s1">file</span> <span class="pl-c1">=</span> <span class="pl-s1">file</span>[<span class="pl-s1">file</span>.<span class="pl-en">find</span>(<span class="pl-s">"["</span>):]

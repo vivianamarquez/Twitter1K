@@ -1,4 +1,6 @@
 
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
@@ -39,13 +41,25 @@
       aquí les traigo el análisis de mi Twitter usando Ciencia de Datos.
       <br><br>
       
-<h2 id="-los-datos">🤔 ¿Dónde están mis datos?</h2>
+<h2 id="-datos">🤔 ¿Dónde están mis datos?</h2>
       Para comenzar este proyecto, el primer paso es obtener nuestros datos. 
       Por lo general, para conseguir información histórica de Twitter, tenemos que crear un web scraper ya que Twitter sólo permite extraer infomación de hace una semana a través de su API.<br><br>
       La buena noticia es que Twitter nos permite descargar nuestros própios tweets de una manera fácil y directa. 
       Sólo debemos ingresar a <a href="https://twitter.com/settings/your_twitter_data" target="_blank">twitter.com/settings/your_twitter_data</a>, poner nuestra clave y esperar a que llegue un archivo zip a nuestro email en unos minutos.<br><br>
       Este archivo contiene muchos datos sobre nuestra cuenta, e incluso trae una página HTML para navegar y digerir toda la información.
       Sin embargo, aquí vamos a hacer un análisis personalizado, para el cuál necesitaremos el archivo <code class="language-plaintext highlighter-rouge">tweet.js</code>.
+      
+<h2 id="-limpiar">🧼 Limpiar nuestros datos</h2>
+      La información sobre nuestros tweets viene en un archivo de JavaScript, pero fácilmente podemos convertirlos en JSON para después leerlos usando Pandas con el siguiente código:
+      <code class="prettify">
+        with open('../data/tweet.js') as f:
+          file = f.read()
+          file = file[file.find("["):]
+    
+        data = json.loads(file)
+        df = json_normalize(data)
+      </code>
+      
 
 <hr />
 

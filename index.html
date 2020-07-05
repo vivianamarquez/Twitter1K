@@ -1,6 +1,4 @@
 
-<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
-
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
@@ -51,14 +49,12 @@
       
 <h2 id="-limpiar">🧼 Limpiar nuestros datos</h2>
       La información sobre nuestros tweets viene en un archivo de JavaScript, pero fácilmente podemos convertirlos en JSON para después leerlos usando Pandas con el siguiente código:
-      <code class="prettify">
-        with open('../data/tweet.js') as f:
-          file = f.read()
-          file = file[file.find("["):]
-    
-        data = json.loads(file)
-        df = json_normalize(data)
-      </code>
+
+      <div class="highlight highlight-source-python"><pre><span class="pl-k">with</span> <span class="pl-en">open</span>(<span class="pl-s">'../data/tweet.js'</span>) <span class="pl-k">as</span> <span class="pl-s1">f</span>:
+    <span class="pl-s1">file</span> <span class="pl-c1">=</span> <span class="pl-s1">f</span>.<span class="pl-en">read</span>()
+    <span class="pl-s1">file</span> <span class="pl-c1">=</span> <span class="pl-s1">file</span>[<span class="pl-s1">file</span>.<span class="pl-en">find</span>(<span class="pl-s">"["</span>):]
+    <span class="pl-s1">data</span> <span class="pl-c1">=</span> <span class="pl-s1">json</span>.<span class="pl-en">loads</span>(<span class="pl-s1">file</span>)
+    <span class="pl-s1">df</span> <span class="pl-c1">=</span> <span class="pl-en">json_normalize</span>(<span class="pl-s1">data</span>)</pre></div>
       
 
 <hr />

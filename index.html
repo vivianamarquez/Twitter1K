@@ -144,14 +144,24 @@
 	<h2 id="-nerd">🤓 La Asignación Latente de Dirichlet (LDA)</h2>
 	    
 	    Quisé ir un paso más allá y hacer modelado de tópicos de mis tweets usando la Asignación Latente de Dirichlet (LDA). 
-	    LDA es un modelo de machine learning no supervisado que usa la distribución de Dirichlet para encontrar temas, como su própio nombre lo dice, latentes en un conjunto de documentos. 
+	    LDA es un modelo de machine learning no supervisado que usa la distribución de Dirichlet para encontrar temas, como su própio nombre lo dice, latentes en un conjunto de documentos. <br>
 	    Aunque ambos son modelos de agrupamiento, LDA es mejor que el clásico K-Medias para asignar temas a un conjunto de documentos ya que asume que un documento puede tener varios temas. 
 	    La mala noticia es que LDA no funciona muy bien con tweets ya que son muy cortos. Sin embargo, después de mucha manipulación de los datos (sacar la raíz de las palabras, ignorar las de mucha/baja frecuencia, usar sólo verbos y adjetivos, etc.), logré obtener un resultado decente para mis tweets del 2016.
 	    
-	<p align="center"><iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="http://vivianamarquez.com/Twitter1K/plots/ldaESP.html" height="120%" width="120%"></iframe></p>    
+	<p align="center"><iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="http://vivianamarquez.com/Twitter1K/plots/ldaESP.html" height="1200" width="120%"></iframe></p>    
 	    
+	    Los seis temas detectados por LDA fueron:
+	    <ul>
+		    <li><b>Tema 1:</b> Lugares
+			    <blockquote class="twitter-tweet"><p lang="es" dir="ltr">Tantos años viviendo en Florida y nunca me había tocado un tornado así. Qué susto, fue cortico pero muy feo. </p>&mdash; Viviana Márquez (@vivmarquez) <a href="https://twitter.com/vivmarquez/status/688072147797934081?ref_src=twsrc%5Etfw">January 15, 2016</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		    <li><b>Tema 2:</b> Aprender + Rusia
+		    <li><b>Tema 3:</b> Matemáticas
+		    <li><b>Tema 4:</b> Estudiar
+		    <li><b>Tema 5:</b> Ruso + Idiomas
+		    <li><b>Tema 6:</b> Tiempo
+	    </ul>
 	    
-	    
+
 
 <br><br>
 <hr />

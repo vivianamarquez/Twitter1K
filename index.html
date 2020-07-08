@@ -142,9 +142,15 @@
       
 
 	<h2 id="-nerd">🤓 La Asignación Latente de Dirichlet (LDA)</h2>
-	<p align="center"><iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="http://vivianamarquez.com/Twitter1K/plots/ldaESP.html" height="120%" width="120%"></iframe></p>    
+	    
 	    Quisé ir un paso más allá y hacer modelado de tópicos de mis tweets usando la Asignación Latente de Dirichlet (LDA). 
-	    LDA es un modelo de machine learning no supervisado (es decir, en el cual no tenemos datos 
+	    LDA es un modelo de machine learning no supervisado que usa la distribución de Dirichlet para encontrar temas, como su própio nombre lo dice, latentes en un conjunto de documentos. 
+	    Aunque ambos son modelos de agrupamiento, LDA es mejor que el clásico K-Medias para asignar temas a un conjunto de documentos ya que asume que un documento puede tener varios temas. 
+	    La mala noticia es que LDA no funciona muy bien con tweets ya que son muy cortos. Sin embargo, después de mucha manipulación de los datos (sacar la raíz de las palabras, ignorar las de mucha/baja frecuencia, usar sólo verbos y adjetivos, etc.), logré obtener un resultado decente para mis tweets del 2016.
+	    
+	<p align="center"><iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="http://vivianamarquez.com/Twitter1K/plots/ldaESP.html" height="120%" width="120%"></iframe></p>    
+	    
+	    
 	    
 
 <br><br>

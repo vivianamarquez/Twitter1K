@@ -10,7 +10,7 @@ In the Jupyter Notebooks you will find some pandas, plotly, LDA. 🐍📊🐼
 
 
 
-# Analizando mis propios tuits | Celebración 1K en Twitter 🎈
+# Analizando mis propios tuits | Celebración 1K Twitter 🎈
 
 ¡Hola a todos! Aún estoy celebrando haber llegado a los mil seguidores en [twitter](https://twitter.com/vivmarquez) 🤗
 

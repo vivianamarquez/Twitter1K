@@ -1,6 +1,6 @@
 # Analyzing my own tweets | Twitter 1K Celebration 🎈
 
-Hi all! I'm still celebrating having reached 1K followers on [https://twitter.com/vivmarquez](twitter) 🤗
+Hi all! I'm still celebrating having reached 1K followers on [twitter](https://twitter.com/vivmarquez) 🤗
 
 As I promised you on my [https://www.youtube.com/watch?v=7_16u-MrnQU](first) YouTube video, I analyzed my own tweets.
 

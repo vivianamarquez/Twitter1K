@@ -1,9 +1,9 @@
 # Video de [YouTube AQUÍ](https://youtu.be/m1-MUCQtO3Q)
-👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆
+👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆
 
 
 
-# Analyzing my own tweets | Twitter 1K Celebration 🎈
+## Analyzing my own tweets | Twitter 1K Celebration 🎈
 
 Hi all! I'm still celebrating having reached 1K followers on [twitter](https://twitter.com/vivmarquez) 🤗
 
@@ -15,7 +15,7 @@ In the Jupyter Notebooks you will find some pandas, plotly, LDA. 🐍📊🐼
 
 
 
-# Analizando mis propios tuits | Celebración 1K Twitter 🎈
+## Analizando mis propios tuits | Celebración 1K Twitter 🎈
 
 ¡Hola a todos! Aún estoy celebrando haber llegado a los mil seguidores en [twitter](https://twitter.com/vivmarquez) 🤗
 

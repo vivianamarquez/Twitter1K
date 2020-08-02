@@ -1,8 +1,7 @@
 # Video de [YouTube AQUÍ](https://youtu.be/m1-MUCQtO3Q)
 👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆
-~
-~
-~
+<br>
+<br>
 
 ## Analyzing my own tweets | Twitter 1K Celebration 🎈
 
